@@ -4,6 +4,8 @@ Hello!
 
 # Partie 1: Drupal
 
+**Si à un quelconque moment il faut se log sur le Drupal, les credentials sont matierenoire - matierenoire**
+
 Dans un premier temps, je me suis concentré sur l'installation de Drupal. J'ai suivi le tutoriel suivant (n'ayant pas touché à Drupal depuis bien longtemps): https://valuebound.com/resources/blog/drupal-8-installation-in-windows-with-xampp
 
 - J'ai donc installé XAMPP et activé les modules MySQL et APACHE dans le dashboard. 

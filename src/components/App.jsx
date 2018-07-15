@@ -1,39 +1,36 @@
 import React, { Component } from 'react';
 
-import FunctionalComponent from './FunctionalComponent';
-import ClassComponent from './ClassComponent';
 import '../../style/style.css';
+import Content from './Content';
+
 
 
 class App extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
 
         this.state = {
-            item: '',
-            items: []
+            details: false,
+            index: 0
         };
+
+        this.handleClickDetails = this.handleClickDetails.bind(this);
     }
 
-    addItem () {
-        if (!this.state.item) {
-            console.log('No item value.');
-        } else {
-            this.setState(() => {
-                items: this.state.items.push(this.state.item);
-            });
-        }
+    handleClickDetails(indexClicked) {
+        this.setState({
+            details: (!this.state.details),
+            index: indexClicked
+        });
     }
 
-    render () {
+    render() {
         return (
-        <div className="app-container">
-            <input value={this.state.item} onChange={(e) => this.setState({ item: e.target.value })} />
-            <button onClick={() => this.addItem()} >Submit item</button>
-
-            <FunctionalComponent />
-            <ClassComponent />
-        </div>
+            <div className="app-container">
+                <Content detailsState={this.state.details}
+                    handleDetails={this.handleClickDetails}
+                    nodeIndex={this.state.index} />
+            </div>
         );
     }
 }

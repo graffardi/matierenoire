@@ -24,4 +24,32 @@ Le tour est joué, il ne reste plus qu'à utiliser toutes ces données!
 
 # Partie 2: React.js
 
-Incoming...
+**Pour que la partie React fonctionne il faut installer l'extension Chrome suivante:** https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
+**En effet je n'ai pas réussi à mettre en place les CORS sur Drupal malgré toutes mes tentatives de configuration dans default.services.yml et services.yml, j'ai même essayé d'installer des modules deprecated pour y arriver, sans succès.**
+
+# Partie 3: Une fois l'extension installée et activée nous pouvons attaquer le vif du sujet
+
+Pour ce qui est de la partie React.js, je me suis débrouillé comme ceci:
+
+- J'ai importé mon starter habituel: https://github.com/graffardi/react-sample
+
+- J'ai ensuite créé un component Content qui va fonctionner en duo avec le component App. Le component App a toujours la main sur ce qui doit être affiché car cette information est stockée dans son state.
+
+- Je passe une méthode du component App en props de mon component Content pour modifier les informations contenues dans App. (Ce n'était pas la chose la plus judicieuse à faire je le sais, mais cela m'amusait) :)
+
+- J'ai utilisé Reactstrap (qui encapsule Bootstrap dans différents components) pour mettre le tout en forme.
+
+- J'utilise Axios pour mes calls API.
+
+Pour lancer la partie JS, simplement suivre les instructions suivantes:
+
+```
+npm install
+npm start
+```
+
+L'app se lance sur le port 8080 par défaut.
+
+Vous trouverez donc un dump de la DB Drupal à la racine du projet.
+
+Ciao :)
